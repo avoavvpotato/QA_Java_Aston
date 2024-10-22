@@ -4,33 +4,42 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("printThreeWords function");
+        //Practical task 1
+        System.out.println("Function printThreeWords");
         printThreeWords();
 
-        System.out.println("\ncheckSumSign function");
+        //Practical task 2
+        System.out.println("\nFunction checkSumSign");
         checkSumSign();
 
-        System.out.println("\nprintColor function");
+        //Practical task 3
+        System.out.println("\nFunction printColor");
         printColor();
 
-        System.out.println("\ncompareNumbers function");
+        //Practical task 4
+        System.out.println("\nFunction compareNumbers");
         compareNumbers();
 
-        System.out.println("\ncheckSumRange for 9 and 1: " + checkSumRange(9, 1));
-        System.out.println("checkSumRange for 8 and 1: " + checkSumRange(8, 1));
+        //Practical task 5
+        System.out.println("\nFunction checkSumRange for 9 and 1: " + checkSumRange(9, 1));
+        System.out.println("Function checkSumRange for 8 and 1: " + checkSumRange(8, 1));
 
-        System.out.println("\ncheckNumberPrint function");
+        //Practical task 6
+        System.out.println("\nFunction checkNumberPrint function");
         checkNumberPrint(0);
 
-        System.out.println("\ncheckNumber for -1: " + checkNumber(-1));
-        System.out.println("checkNumber for 0: " + checkNumber(0));
+        //Practical task 7
+        System.out.println("\nFunction checkNumber for -1: " + checkNumber(-1));
+        System.out.println("Function checkNumber for 0: " + checkNumber(0));
 
-        System.out.println("\nprintString function");
+        //Practical task 8
+        System.out.println("\nFunction printString function");
         printString("Hello", 3);
 
-        System.out.println("\nisLeapYear function for 100: " + isLeapYear(100));
-        System.out.println("isLeapYear function for 4: " + isLeapYear(4));
-        System.out.println("isLeapYear function for 800: " + isLeapYear(800));
+        //Practical task 9
+        System.out.println("\nFunction isLeapYear function for 100: " + isLeapYear(100));
+        System.out.println("Function isLeapYear function for 4: " + isLeapYear(4));
+        System.out.println("Function isLeapYear function for 800: " + isLeapYear(800));
 
         //Practical task 10
         int[] binaryArray = {0, 1, 0, 0, 1, 1, 0, 1, 0, 1};

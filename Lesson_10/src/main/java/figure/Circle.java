@@ -6,17 +6,13 @@ public class Circle implements FigureParameters{
     private final String borderColor;
 
     public Circle(double radius, String fillColor, String borderColor) {
-        validateRadius(radius);
+        Validator.validateRadius(radius);
+        Validator.validateColor(fillColor, "Fill color");
+        Validator.validateColor(borderColor, "Border color");
 
         this.radius = radius;
         this.fillColor = fillColor;
         this.borderColor = borderColor;
-    }
-
-    private void validateRadius(double radius) {
-        if (radius <= 0) {
-            throw new IllegalArgumentException("Radius must be positive.");
-        }
     }
 
     @Override

@@ -7,18 +7,15 @@ class Rectangle implements FigureParameters {
     private final String borderColor;
 
     public Rectangle(double width, double height, String fillColor, String borderColor) {
-        validateSides(width, height);
+        Validator.validateSide(width);
+        Validator.validateSide(height);
+        Validator.validateColor(fillColor, "Fill color");
+        Validator.validateColor(borderColor, "Border color");
 
         this.width = width;
         this.height = height;
         this.fillColor = fillColor;
         this.borderColor = borderColor;
-    }
-
-    private void validateSides(double width, double height) {
-        if (width <= 0 || height <= 0) {
-            throw new IllegalArgumentException("All sides must be positive.");
-        }
     }
 
     @Override

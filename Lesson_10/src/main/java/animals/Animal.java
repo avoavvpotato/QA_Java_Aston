@@ -5,8 +5,15 @@ abstract class Animal {
     protected static int animalsCounter = 0;
 
     public Animal(String name) {
+        validateName(name);
         this.name = name;
         animalsCounter++;
+    }
+
+    private void validateName(String name) {
+        if (name == null || name.trim().isEmpty()) {
+            throw new IllegalArgumentException("Name cannot be null or empty.");
+        }
     }
 
     public String getName() {

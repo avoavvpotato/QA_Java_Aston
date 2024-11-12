@@ -8,7 +8,12 @@ class Triangle implements FigureParameters {
     private final String borderColor;
 
     public Triangle(double a, double b, double c, String fillColor, String borderColor) {
-        validateSides(a, b, c);
+        Validator.validateSide(a);
+        Validator.validateSide(b);
+        Validator.validateSide(c);
+        Validator.validateTriangle(a, b, c);
+        Validator.validateColor(fillColor, "Fill color");
+        Validator.validateColor(borderColor, "Border color");
 
         this.a = a;
         this.b = b;
@@ -17,12 +22,9 @@ class Triangle implements FigureParameters {
         this.borderColor = borderColor;
     }
 
-    private void validateSides(double a, double b, double c) {
-        if (a <= 0 || b <= 0 || c <= 0) {
-            throw new IllegalArgumentException("All sides must be positive.");
-        }
-        if (a + b <= c || a + c <= b || b + c <= a) {
-            throw new IllegalArgumentException("Invalid triangle");
+    private void validateColor(String color, String colorName) {
+        if (color == null || color.trim().isEmpty()) {
+            throw new IllegalArgumentException(colorName + " cannot be null or empty.");
         }
     }
 

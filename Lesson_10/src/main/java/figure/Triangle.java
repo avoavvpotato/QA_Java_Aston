@@ -22,12 +22,6 @@ class Triangle implements FigureParameters {
         this.borderColor = borderColor;
     }
 
-    private void validateColor(String color, String colorName) {
-        if (color == null || color.trim().isEmpty()) {
-            throw new IllegalArgumentException(colorName + " cannot be null or empty.");
-        }
-    }
-
     @Override
     public double area() {
         double s = (a + b + c) / 2;
